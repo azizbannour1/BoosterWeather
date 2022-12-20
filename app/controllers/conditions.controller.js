@@ -13,7 +13,7 @@ exports.create = (req, res) => {
   }
 
   // Create a conditions
-  const Condition = {
+  const condition = {
     name: req.body.name,
     interval: req.body.interval,
     percentage: req.body.percentage,

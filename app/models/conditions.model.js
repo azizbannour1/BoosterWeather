@@ -4,8 +4,7 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING
     },
     interval: {
-      type: Sequelize.DOUBLE
-
+      type: Sequelize.STRING
     },
     percentage: {
       type: Sequelize.DOUBLE

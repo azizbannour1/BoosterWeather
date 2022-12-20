@@ -6,8 +6,11 @@ module.exports = app => {
   // Retrieve all settings
   router.get("/", settings.getCapacity);
 
-  // Retrieve all settings
+  // Retrieve all countries
   router.get("/countries", settings.getCountries);
+
+  // Retrieve all weather
+  router.post("/weather", settings.getWeather);
 
 
   app.use('/api/settings', router);
