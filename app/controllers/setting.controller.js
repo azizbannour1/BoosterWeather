@@ -1,19 +1,8 @@
-const db = require("../models");
-const Setting = db.settings;
+// Retrieve capacity
+exports.getCapacity = (req, res) => {
 
 
-// Retrieve all Settings from the database.
-exports.findAll = (req, res) => {
+  res.send({ "capacity": 100 });
 
-  Residance.findAll()
-    .then(data => {
-      res.send(data);
-    })
-    .catch(err => {
-      res.status(500).send({
-        message:
-          err.message || "Some error occurred while retrieving Settings."
-      });
-    });
 };
 

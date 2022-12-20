@@ -32,10 +32,11 @@ db.sequelize.sync()
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to Momo application." });
+  res.json({ message: "Welcome to Momo backend." });
 });
 
 require("./app/routes/residance.routes")(app);
+require("./app/routes/settings.routes")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8081;
