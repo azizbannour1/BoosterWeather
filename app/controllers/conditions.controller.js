@@ -1,5 +1,5 @@
 const db = require("../models");
-const Cond = db.conditions;
+const Condition = db.conditions;
 const Op = db.Sequelize.Op;
 
 // Create and Save a new condition
@@ -13,7 +13,7 @@ exports.create = (req, res) => {
   }
 
   // Create a conditions
-  const Cond = {
+  const Condition = {
     name: req.body.name,
     interval: req.body.interval,
     percentage: req.body.percentage,
@@ -22,7 +22,7 @@ exports.create = (req, res) => {
   };
 
   // Save condition in the database
-  Cond.create(condition)
+  Condition.create(condition)
     .then(data => {
       res.send(data);
     })
@@ -37,7 +37,7 @@ exports.create = (req, res) => {
 // Retrieve all conditions from the database.
 exports.findAll = (req, res) => {
 
-  Cond.findAll()
+  Condition.findAll()
     .then(data => {
       res.send(data);
     })
@@ -53,7 +53,7 @@ exports.findAll = (req, res) => {
 exports.findOne = (req, res) => {
   const id = req.params.id;
 
-  Cond.findByPk(id)
+  Condition.findByPk(id)
     .then(data => {
       if (data) {
         res.send(data);
@@ -74,7 +74,7 @@ exports.findOne = (req, res) => {
 exports.update = (req, res) => {
   const id = req.params.id;
 
-  Cond.update(req.body, {
+  Condition.update(req.body, {
     where: { id: id }
   })
     .then(num => {
@@ -99,7 +99,7 @@ exports.update = (req, res) => {
 exports.delete = (req, res) => {
   const id = req.params.id;
 
-  Cond.destroy({
+  Condition.destroy({
     where: { id: id }
   })
     .then(num => {
@@ -122,7 +122,7 @@ exports.delete = (req, res) => {
 
 // Delete all Tutorials from the database.
 exports.deleteAll = (req, res) => {
-  Cond.destroy({
+  Condition.destroy({
     where: {},
     truncate: false
   })

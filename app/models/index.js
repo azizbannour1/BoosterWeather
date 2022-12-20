@@ -20,11 +20,7 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.residances = require("./residance.model.js")(sequelize, Sequelize);
-<<<<<<< Updated upstream
-db.settings = require("./setting.model.js")(sequelize, Sequelize);
-db.settings = require("./conditions.model.js")(sequelize, Sequelize);
+db.conditions = require("./conditions.model.js")(sequelize, Sequelize);
 
-=======
->>>>>>> Stashed changes
 
 module.exports = db;

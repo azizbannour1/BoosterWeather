@@ -37,6 +37,7 @@ app.get("/", (req, res) => {
 
 require("./app/routes/residance.routes")(app);
 require("./app/routes/settings.routes")(app);
+require("./app/routes/conditions.routes")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8081;
