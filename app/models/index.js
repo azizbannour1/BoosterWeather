@@ -20,5 +20,6 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.residances = require("./residance.model.js")(sequelize, Sequelize);
+db.settings = require("./setting.model.js")(sequelize, Sequelize);
 
 module.exports = db;

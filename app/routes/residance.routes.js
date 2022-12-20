@@ -21,5 +21,5 @@ module.exports = app => {
   // Delete all residance
   router.delete("/", residances.deleteAll);
 
-  app.use('/api/residance', router);
+  app.use('/api/residances', router);
 };
